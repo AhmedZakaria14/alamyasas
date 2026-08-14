@@ -1,9 +1,9 @@
-/* Style reminder: faithful Movion reproduction — editorial geometry, warm white, charcoal, Movion red #ee1d38, high-contrast photography, pill CTAs. */
+/* Style reminder: faithful Movion reproduction — editorial geometry, warm white, charcoal, Movion red #123b63, high-contrast photography, pill CTAs. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
-:root { --red:#ee1d38; --ink:#171719; --muted:#66666c; --paper:#fbfbfa; --line:#e8e8e6; --radius:0.35rem; }
+:root { --red:#123b63; --ink:#171719; --muted:#66666c; --paper:#fbfbfa; --line:#e8e8e6; --radius:0.35rem; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; font-size:15px; line-height:1.65; }
