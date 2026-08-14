@@ -131,3 +131,59 @@ h2 em { color:var(--red); font-style:normal; }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
 @media (max-width:900px) { .desktop-nav,.header-cta { display:none; } .menu-button { display:block; } .mobile-nav { display:flex; flex-direction:column; position:absolute; top:76px; left:0; right:0; background:#fff; padding:20px; box-shadow:0 20px 30px #0002; gap:15px; } .mobile-nav a { padding:7px 0; } .mobile-nav .pill { margin-top:5px; width:max-content; } .hero { flex-direction:column; align-items:flex-start; justify-content:flex-end; } .stats { align-self:stretch; width:100%; gap:20px; } .stat { text-align:left; } .stat strong { font-size:34px; } .split-heading,.section-top { flex-direction:column; align-items:flex-start; gap:25px; } .feature-grid,.about-layout,.contact-page { grid-template-columns:1fr; } .feature-panel { min-height:500px; } .about-image { min-height:400px; } .about-copy { padding:0; } .contact-page { gap:60px; } .footer-main { grid-template-columns:1fr 1fr; } }
 @media (max-width:600px) { .site-header { height:68px; } .brand { font-size:25px; } .hero { min-height:700px; padding:80px 20px 40px; } .hero h1 { font-size:48px; } .stats { grid-template-columns:1fr 1fr; } .section-pad { padding:72px 20px; } .service-cards { grid-template-columns:1fr; margin-top:35px; } .page-banner { height:260px; } .newsletter { display:block; } .newsletter form { margin-top:30px; } .footer-main { grid-template-columns:1fr; gap:35px; } .footer-bottom { display:block; line-height:2; } .footer-bottom span:last-child { margin-top:7px; } .form-grid { grid-template-columns:1fr; } .contact-form { padding:22px; } }
+
+/* Exact source extensions: Pages dropdown, Team, Pricing, FAQ, Blog and 404 layouts. */
+.nav-dropdown { position:relative; display:flex; align-items:center; }
+.nav-dropdown button { border:0; background:transparent; display:flex; align-items:center; gap:4px; color:#28282a; font-size:13px; padding:0; }
+.nav-dropdown button.active,.nav-dropdown button:hover { color:var(--red); }
+.dropdown-menu { position:absolute; top:28px; left:-18px; min-width:160px; padding:12px 0; background:#fff; box-shadow:0 16px 35px #0002; border-top:2px solid var(--red); z-index:20; }
+.dropdown-menu a { display:block; padding:8px 18px; white-space:nowrap; }
+.dropdown-menu a:hover { color:var(--red); background:#fafafa; }
+.card-arrow { width:36px; height:36px; display:grid; place-items:center; border-radius:50%; background:var(--red); color:#fff; margin-top:15px; transition:transform .2s ease; }
+.service-card:hover .card-arrow { transform:translateX(5px); }
+.team-grid,.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:52px; }
+.team-card { background:#fff; padding-bottom:20px; }
+.team-photo { height:350px; background-size:cover; background-position:center; filter:grayscale(.1); transition:transform .5s ease, filter .5s ease; }
+.team-card:hover .team-photo { transform:translateY(-6px); filter:grayscale(0); }
+.team-card h3,.team-card p { margin:16px 20px 0; }
+.team-card p { color:var(--muted); font-size:13px; }
+.why-section { background:#f2f2f0; }
+.why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:42px; }
+.why-grid > div { background:#fff; padding:26px; min-height:170px; }
+.why-grid h3 { font-size:18px; margin-top:24px; }
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:1080px; margin:50px auto 0; }
+.price-card { background:#fff; border:1px solid var(--line); padding:38px 32px; position:relative; }
+.price-card.featured { background:var(--ink); color:#fff; transform:translateY(-14px); box-shadow:0 22px 50px #0002; }
+.price-card h3 { font-size:24px; }
+.price { font:600 52px/1 'Montserrat',sans-serif; margin:28px 0; }
+.price small { font:400 12px 'Inter',sans-serif; color:var(--muted); margin-left:5px; }
+.featured .price small { color:#aaa; }
+.price-card p { display:flex; align-items:center; gap:10px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); padding:13px 0; }
+.featured .price-card p,.featured p { color:#ddd; border-color:#ffffff22; }
+.pill-outline { border:1px solid var(--ink); padding:13px 20px; display:inline-flex; align-items:center; gap:18px; }
+.steps-section { background:#f2f2f0; }
+.steps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:40px; }
+.steps-grid > div { border-top:1px solid #bbb; padding-top:20px; }
+.steps-grid span { color:var(--red); font:700 13px 'Montserrat'; letter-spacing:.12em; }
+.steps-grid h3 { font-size:18px; margin-top:20px; }
+.faq-list { max-width:850px; margin:48px auto 0; border-top:1px solid var(--line); }
+.faq-item { border-bottom:1px solid var(--line); padding:4px 0; }
+.faq-item button { border:0; background:transparent; width:100%; padding:23px 5px; display:flex; justify-content:space-between; align-items:center; text-align:left; font:500 17px 'Montserrat'; }
+.faq-item button svg { color:var(--red); flex:none; }
+.faq-item p { color:var(--muted); max-width:700px; padding:0 5px 24px; margin:0; }
+.blog-card { background:#fff; padding-bottom:28px; }
+.blog-image { height:230px; background-size:cover; background-position:center; margin-bottom:24px; }
+.blog-card .eyebrow,.blog-card h3,.blog-card p,.blog-card .text-link { margin-left:24px; margin-right:24px; }
+.blog-card h3 { font-size:22px; margin-bottom:12px; }
+.blog-card p { color:var(--muted); }
+.not-found { min-height:450px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.not-found h2 { font-size:clamp(42px,6vw,78px); margin-bottom:28px; }
+@media (max-width:900px) { .team-grid,.blog-grid,.pricing-grid { grid-template-columns:repeat(2,1fr); } .why-grid,.steps-grid { grid-template-columns:repeat(2,1fr); } .price-card.featured { transform:none; } }
+@media (max-width:600px) { .dropdown-menu { display:none; } .team-grid,.blog-grid,.pricing-grid,.why-grid,.steps-grid { grid-template-columns:1fr; } .team-photo { height:320px; } .price-card { padding:28px 22px; } }
+
+/* Source fidelity fix: the original wordmark is a full-width raster logo, not a tiny symbol. */
+.site-header .brand { display:flex; align-items:center; width:132px; }
+.site-header .brand img { display:block; width:132px; height:auto; max-height:32px; object-fit:contain; }
+.footer .brand { display:flex; align-items:center; width:150px; }
+.footer .brand img { display:block; width:150px; height:auto; max-height:38px; object-fit:contain; }
+@media (max-width:600px) { .site-header .brand,.site-header .brand img { width:112px; } }
