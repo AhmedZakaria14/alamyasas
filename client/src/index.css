@@ -29,6 +29,16 @@ button,input,textarea { font:inherit; }
 .header-cta span { width:28px; height:28px; }
 .menu-button { display:none; border:0; background:none; color:var(--ink); }
 .mobile-nav { display:none; }
+/* Al Alamy quick-contact controls: persistent, high contrast, and clear on RTL layouts. */
+.floating-contacts { position:fixed; inset-inline-start:22px; bottom:22px; z-index:70; display:grid; gap:10px; direction:rtl; }
+.floating-contact { min-height:48px; display:inline-flex; align-items:center; justify-content:flex-start; gap:10px; padding:10px 15px; border:2px solid #fff; border-radius:999px; color:#fff; box-shadow:0 12px 28px rgba(12,34,58,.24); font-size:13px; font-weight:700; line-height:1; transition:transform .18s cubic-bezier(.23,1,.32,1),box-shadow .18s cubic-bezier(.23,1,.32,1); }
+.floating-contact:hover { transform:translateY(-3px); box-shadow:0 16px 32px rgba(12,34,58,.32); }
+.floating-contact:active { transform:scale(.97); }
+.floating-contact span { width:23px; height:23px; display:grid; place-items:center; border-radius:50%; background:#fff; font-family:Arial,sans-serif; font-size:15px; font-weight:700; }
+.floating-whatsapp { background:#1da851; }
+.floating-whatsapp span { color:#1da851; }
+.floating-phone { background:#123b63; }
+.floating-phone span { color:#123b63; }
 .hero { min-height:calc(100vh - 76px); min-height:650px; background-size:cover; background-position:center; color:#fff; display:flex; align-items:center; justify-content:space-between; padding:clamp(75px,12vh,150px) clamp(20px,7vw,100px) clamp(50px,7vh,90px); gap:40px; }
 .hero-copy { max-width:700px; animation:rise .65s both; }
 .eyebrow { color:var(--red); font-size:11px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; margin-bottom:20px; }
@@ -133,7 +143,7 @@ h2 em { color:var(--red); font-style:normal; }
 @media (prefers-reduced-motion:reduce) { .reveal,.reveal .service-card { opacity:1; transform:none; transition:none; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
 @media (max-width:900px) { .site-header { height:84px; } .brand { flex-basis:78px; } .brand img { width:78px; height:78px; } .desktop-nav,.header-cta { display:none; } .menu-button { display:block; } .mobile-nav { display:flex; flex-direction:column; position:absolute; top:84px; left:0; right:0; background:#fff; padding:20px; box-shadow:0 20px 30px #0002; gap:15px; } .mobile-nav a { padding:7px 0; } .mobile-nav .pill { margin-top:5px; width:max-content; } .hero { flex-direction:column; align-items:flex-start; justify-content:flex-end; } .stats { align-self:stretch; width:100%; gap:20px; } .stat { text-align:left; } .stat strong { font-size:34px; } .split-heading,.section-top { flex-direction:column; align-items:flex-start; gap:25px; } .feature-grid,.about-layout,.contact-page { grid-template-columns:1fr; } .feature-panel { min-height:500px; } .about-image { min-height:400px; } .about-copy { padding:0; } .contact-page { gap:60px; } .footer-main { grid-template-columns:1fr 1fr; } }
-@media (max-width:600px) { .site-header { height:76px; } .brand { flex-basis:66px; font-size:25px; } .brand img { width:66px; height:66px; } .mobile-nav { top:76px; } .hero { min-height:700px; padding:80px 20px 40px; } .hero h1 { font-size:48px; } .stats { grid-template-columns:1fr 1fr; } .section-pad { padding:72px 20px; } .service-cards { grid-template-columns:1fr; margin-top:35px; } .page-banner { height:260px; } .newsletter { display:block; } .newsletter form { margin-top:30px; } .footer-main { grid-template-columns:1fr; gap:35px; } .footer-bottom { display:block; line-height:2; } .footer-bottom span:last-child { margin-top:7px; } .form-grid { grid-template-columns:1fr; } .contact-form { padding:22px; } .footer-logo { width:112px; height:112px; } }
+@media (max-width:600px) { .site-header { height:76px; } .brand { flex-basis:66px; font-size:25px; } .brand img { width:66px; height:66px; } .mobile-nav { top:76px; } .hero { min-height:700px; padding:80px 20px 40px; } .hero h1 { font-size:48px; } .stats { grid-template-columns:1fr 1fr; } .section-pad { padding:72px 20px; } .service-cards { grid-template-columns:1fr; margin-top:35px; } .page-banner { height:260px; } .newsletter { display:block; } .newsletter form { margin-top:30px; } .footer-main { grid-template-columns:1fr; gap:35px; } .footer-bottom { display:block; line-height:2; } .footer-bottom span:last-child { margin-top:7px; } .form-grid { grid-template-columns:1fr; } .contact-form { padding:22px; } .footer-logo { width:112px; height:112px; } .floating-contacts { inset-inline-start:14px; bottom:14px; gap:8px; } .floating-contact { min-height:46px; padding:10px 13px; font-size:12px; } }
 
 /* Exact source extensions: Pages dropdown, Team, Pricing, FAQ, Blog and 404 layouts. */
 .nav-dropdown { position:relative; display:flex; align-items:center; }
