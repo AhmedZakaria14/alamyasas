@@ -9,9 +9,9 @@ html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; font-size:15px; line-height:1.65; }
 a { color:inherit; text-decoration:none; }
 button,input,textarea { font:inherit; }
-.site-header { height:76px; padding:0 clamp(20px,5vw,72px); display:flex; align-items:center; justify-content:space-between; gap:28px; background:#fff; position:relative; z-index:10; }
-.brand { display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-size:28px; font-weight:600; letter-spacing:-1.4px; }
-.brand img { width:33px; height:33px; object-fit:contain; }
+.site-header { height:100px; padding:0 clamp(20px,5vw,72px); display:flex; align-items:center; justify-content:space-between; gap:28px; background:#fff; position:relative; z-index:10; }
+.brand { display:inline-flex; align-items:center; justify-content:center; flex:0 0 96px; gap:8px; font-family:'Montserrat',sans-serif; font-size:28px; font-weight:600; letter-spacing:-1.4px; line-height:0; }
+.brand img { display:block; width:96px; height:96px; max-width:none; object-fit:contain; }
 .brand-light { color:#fff; }
 .desktop-nav { display:flex; align-items:center; gap:30px; margin-left:auto; margin-right:30px; }
 .desktop-nav a { display:flex; align-items:center; gap:4px; color:#28282a; font-size:13px; transition:color .2s ease; }
@@ -20,7 +20,7 @@ button,input,textarea { font:inherit; }
 .pill:active { transform:scale(.97); }
 .pill span { width:30px; height:30px; display:grid; place-items:center; border-radius:50%; background:#fff; color:var(--red); }
 .pill-red { background:var(--red); color:#fff; }
-.pill-red:hover { background:#c8142b; }
+.pill-red:hover { background:#0d2d4d; }
 .pill-white { background:#fff; color:var(--ink); }
 .pill-white:hover { background:var(--red); color:#fff; }
 .header-cta { min-width:136px; }
@@ -63,7 +63,7 @@ h2 em { color:var(--red); font-style:normal; }
 .service-card .icon-box { margin-bottom:22px; }
 .service-card h3 { font-size:22px; margin:0 0 8px; letter-spacing:-.03em; }
 .card-image { height:190px; margin-top:22px; border-radius:12px; background-size:cover; background-position:center; }
-.page-banner { height:315px; display:grid; place-items:center; text-align:center; background:#780915; color:#fff; }
+.page-banner { height:315px; display:grid; place-items:center; text-align:center; background:#0d2d4d; color:#fff; }
 .page-banner-image { background-size:cover; background-position:center; }
 .page-banner h1 { font-size:clamp(52px,6vw,76px); margin-bottom:12px; }
 .page-banner p { margin:0; font-size:13px; }
@@ -107,6 +107,7 @@ h2 em { color:var(--red); font-style:normal; }
 .newsletter input::placeholder { color:#aaa; }
 .newsletter .pill { padding:10px 14px 10px 18px; }
 .footer-main { display:grid; grid-template-columns:2fr 1fr 1fr 1.35fr; gap:40px; padding:62px 0 74px; }
+.footer-logo { display:block; width:128px; height:128px; max-width:none; object-fit:contain; margin:-16px 0 -8px; }
 .footer-brand p { color:#aaa; max-width:260px; font-size:13px; margin:20px 0; }
 .footer-main > div:not(.footer-brand) { display:flex; flex-direction:column; gap:9px; }
 .footer-main h4 { font-size:15px; margin:0 0 13px; }
@@ -129,8 +130,8 @@ h2 em { color:var(--red); font-style:normal; }
 .text-link:hover svg { transform:translateX(5px); }
 @media (prefers-reduced-motion:reduce) { .reveal,.reveal .service-card { opacity:1; transform:none; transition:none; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
-@media (max-width:900px) { .desktop-nav,.header-cta { display:none; } .menu-button { display:block; } .mobile-nav { display:flex; flex-direction:column; position:absolute; top:76px; left:0; right:0; background:#fff; padding:20px; box-shadow:0 20px 30px #0002; gap:15px; } .mobile-nav a { padding:7px 0; } .mobile-nav .pill { margin-top:5px; width:max-content; } .hero { flex-direction:column; align-items:flex-start; justify-content:flex-end; } .stats { align-self:stretch; width:100%; gap:20px; } .stat { text-align:left; } .stat strong { font-size:34px; } .split-heading,.section-top { flex-direction:column; align-items:flex-start; gap:25px; } .feature-grid,.about-layout,.contact-page { grid-template-columns:1fr; } .feature-panel { min-height:500px; } .about-image { min-height:400px; } .about-copy { padding:0; } .contact-page { gap:60px; } .footer-main { grid-template-columns:1fr 1fr; } }
-@media (max-width:600px) { .site-header { height:68px; } .brand { font-size:25px; } .hero { min-height:700px; padding:80px 20px 40px; } .hero h1 { font-size:48px; } .stats { grid-template-columns:1fr 1fr; } .section-pad { padding:72px 20px; } .service-cards { grid-template-columns:1fr; margin-top:35px; } .page-banner { height:260px; } .newsletter { display:block; } .newsletter form { margin-top:30px; } .footer-main { grid-template-columns:1fr; gap:35px; } .footer-bottom { display:block; line-height:2; } .footer-bottom span:last-child { margin-top:7px; } .form-grid { grid-template-columns:1fr; } .contact-form { padding:22px; } }
+@media (max-width:900px) { .site-header { height:84px; } .brand { flex-basis:78px; } .brand img { width:78px; height:78px; } .desktop-nav,.header-cta { display:none; } .menu-button { display:block; } .mobile-nav { display:flex; flex-direction:column; position:absolute; top:84px; left:0; right:0; background:#fff; padding:20px; box-shadow:0 20px 30px #0002; gap:15px; } .mobile-nav a { padding:7px 0; } .mobile-nav .pill { margin-top:5px; width:max-content; } .hero { flex-direction:column; align-items:flex-start; justify-content:flex-end; } .stats { align-self:stretch; width:100%; gap:20px; } .stat { text-align:left; } .stat strong { font-size:34px; } .split-heading,.section-top { flex-direction:column; align-items:flex-start; gap:25px; } .feature-grid,.about-layout,.contact-page { grid-template-columns:1fr; } .feature-panel { min-height:500px; } .about-image { min-height:400px; } .about-copy { padding:0; } .contact-page { gap:60px; } .footer-main { grid-template-columns:1fr 1fr; } }
+@media (max-width:600px) { .site-header { height:76px; } .brand { flex-basis:66px; font-size:25px; } .brand img { width:66px; height:66px; } .mobile-nav { top:76px; } .hero { min-height:700px; padding:80px 20px 40px; } .hero h1 { font-size:48px; } .stats { grid-template-columns:1fr 1fr; } .section-pad { padding:72px 20px; } .service-cards { grid-template-columns:1fr; margin-top:35px; } .page-banner { height:260px; } .newsletter { display:block; } .newsletter form { margin-top:30px; } .footer-main { grid-template-columns:1fr; gap:35px; } .footer-bottom { display:block; line-height:2; } .footer-bottom span:last-child { margin-top:7px; } .form-grid { grid-template-columns:1fr; } .contact-form { padding:22px; } .footer-logo { width:112px; height:112px; } }
 
 /* Exact source extensions: Pages dropdown, Team, Pricing, FAQ, Blog and 404 layouts. */
 .nav-dropdown { position:relative; display:flex; align-items:center; }
@@ -181,9 +182,4 @@ h2 em { color:var(--red); font-style:normal; }
 @media (max-width:900px) { .team-grid,.blog-grid,.pricing-grid { grid-template-columns:repeat(2,1fr); } .why-grid,.steps-grid { grid-template-columns:repeat(2,1fr); } .price-card.featured { transform:none; } }
 @media (max-width:600px) { .dropdown-menu { display:none; } .team-grid,.blog-grid,.pricing-grid,.why-grid,.steps-grid { grid-template-columns:1fr; } .team-photo { height:320px; } .price-card { padding:28px 22px; } }
 
-/* Source fidelity fix: the original wordmark is a full-width raster logo, not a tiny symbol. */
-.site-header .brand { display:flex; align-items:center; width:132px; }
-.site-header .brand img { display:block; width:132px; height:auto; max-height:32px; object-fit:contain; }
-.footer .brand { display:flex; align-items:center; width:150px; }
-.footer .brand img { display:block; width:150px; height:auto; max-height:38px; object-fit:contain; }
-@media (max-width:600px) { .site-header .brand,.site-header .brand img { width:112px; } }
+/* هوية العالمي: الشعار مربع، لذا نعتمد إطارًا مرتفعًا بدل معاملته ككلمة أفقية. */
